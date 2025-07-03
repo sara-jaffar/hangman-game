@@ -16,57 +16,73 @@
             <a href="index.html">📖 How to play</a>
         </div>
     </nav>
-    <div>
-        <header>
-            <h1>HANGMAN</h1>
-        </header>
-        <main>
-            <div id="blanks"></div>
+
+    <header>
+        <h1>HANGMAN</h1>
+    </header>
+
+    <main class="game-container">
+
+        <img id="hangman-img" src="images/hangman-0.svg" alt="hangman-img">
+
+        <section class="game-panel"> 
             <p id="message"></p>
+            <div id="blanks"></div>
+            <p id="hint">Hint: </p>
+           
             <div id="wrong-answers">
                 <p id="lives-remaning"></p>
-                <ul id="wrong-letters">
+                <!-- <ul id="wrong-letters">
                     <li class="letter-gussed"></li>
                     <li class="letter-gussed"></li>
                     <li class="letter-gussed"></li>
                     <li class="letter-gussed"></li>
                     <li class="letter-gussed"></li>
                     <li class="letter-gussed"></li>
-                </ul>
+                </ul> -->
             </div>
             <div id="keyboard">
-                <button class="letter-btn">a</button>
-                <button class="letter-btn">b</button>
-                <button class="letter-btn">c</button>
-                <button class="letter-btn">d</button>
-                <button class="letter-btn">e</button>
-                <button class="letter-btn">f</button>
-                <button class="letter-btn">g</button>
-                <button class="letter-btn">h</button>
-                <button class="letter-btn">i</button>
-                <button class="letter-btn">j</button>
-                <button class="letter-btn">k</button>
-                <button class="letter-btn">l</button>
-                <button class="letter-btn">m</button>
-                <button class="letter-btn">n</button>
-                <button class="letter-btn">o</button>
-                <button class="letter-btn">p</button>
-                <button class="letter-btn">q</button>
-                <button class="letter-btn">r</button>
-                <button class="letter-btn">s</button>
-                <button class="letter-btn">t</button>
-                <button class="letter-btn">u</button>
-                <button class="letter-btn">v</button>
-                <button class="letter-btn">w</button>
-                <button class="letter-btn">x</button>
-                <button class="letter-btn">y</button>
-                <button class="letter-btn">z</button>
-            </div>
+                <div class="keyboard-row">
+                    <button class="letter-btn">a</button>
+                    <button class="letter-btn">b</button>
+                    <button class="letter-btn">c</button>
+                    <button class="letter-btn">d</button>
+                    <button class="letter-btn">e</button>
+                    <button class="letter-btn">f</button>
+                    <button class="letter-btn">g</button>
+                    <button class="letter-btn">h</button>
+                    <button class="letter-btn">i</button>
+                </div>
+                <div class="keyboard-row">
+                    <button class="letter-btn">j</button>
+                    <button class="letter-btn">k</button>
+                    <button class="letter-btn">l</button>
+                    <button class="letter-btn">m</button>
+                    <button class="letter-btn">n</button>
+                    <button class="letter-btn">o</button>
 
-            <div id="hangman"></div>
+
+                    <button class="letter-btn">p</button>
+                    <button class="letter-btn">q</button>
+                    <button class="letter-btn">r</button>
+                </div>
+                <div class="keyboard-row">
+                    <button class="letter-btn">s</button>
+                    <button class="letter-btn">t</button>
+                    <button class="letter-btn">u</button>
+                    <button class="letter-btn">v</button>
+                    <button class="letter-btn">w</button>
+                    <button class="letter-btn">x</button>
+                    <button class="letter-btn">y</button>
+                    <button class="letter-btn">z</button>
+                </div>
+            </div>
+            
             <button type="button" id="reset-btn">Reset Game</button>
-        </main>
-    </div>
+
+        </section>
+    </main>
+
 </body>
 
 </html>
