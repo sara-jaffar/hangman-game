@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/app.js"></script>
+</head>
+
+<body>
+
+    <nav>
+        <div>
+            <a href="index.html">🏠 Home</a>
+            <a href="game.html">🎮 Play</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>How To Play</h1>
+    </header>
+
+    <div id="steps-container">
+
+        <div class="steps">
+            <p><strong>1. look at the blanks to see how many letters are in the word.</strong></p>
+            <p><strong>2. Type a letter to guess:</strong><br>
+                - ✅ If it is correct, it appears in the word.<br>
+                - ❌ If it is incorrect, the hangman drawing begins.
+            </p>
+            <p><strong>3. You have limited number of trials:</strong><br>
+                - Each wrong guess adds a part to the stick figure.
+            </p>
+            <p><strong>4. Keep guessing letters until:</strong><br>
+                - 🏆 You reveal the whole word (you win!)<br>
+                - 💀 The hangman is fully drawn (you lose!)<br>
+            </p>
+
+            <a href="game.html"><button type="button" id="start-btn">Start Game</button></a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

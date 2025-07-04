@@ -1,36 +1,37 @@
 /*-------------- Constants -------------*/
 const words = [
-  { word: "cat", hint: "A small domesticated animal" },
-  { word: "dog", hint: "Loyal animal that barks" },
-  { word: "week", hint: "Has seven days" },
-  { word: "apple", hint: "A red or green fruit" },
-  { word: "sun", hint: "The star at the center of our solar system" },
-  { word: "train", hint: "Runs on tracks and carries people or cargo" },
-  { word: "car", hint: "Four-wheeled vehicle" },
-  { word: "phone", hint: "Used to call or text people" },
-  { word: "zebra", hint: "Striped animal in Africa" },
-  { word: "moon", hint: "Orbits the Earth" },
-  { word: "star", hint: "Shines in the night sky" },
-  { word: "chair", hint: "You sit on it" },
-  { word: "plant", hint: "Needs sunlight and water" },
-  { word: "robot", hint: "A machine that can do tasks" },
-  { word: "glass", hint: "Transparent and fragile" },
-  { word: "mouse", hint: "Small rodent or a computer device" },
-  { word: "house", hint: "A place to live" },
-  { word: "light", hint: "Removes darkness" },
-  { word: "candy", hint: "Sweet and sugary treat" },
-  { word: "cloud", hint: "Floats in the sky and brings rain" },
-  { word: "river", hint: "A natural flowing watercourse" },
-  { word: "pizza", hint: "Popular Italian dish with toppings" },
-  { word: "horse", hint: "Large animal you can ride" },
-  { word: "shirt", hint: "Clothing worn on the upper body" },
-  { word: "beach", hint: "Sandy shore by the sea" },
-  { word: "spoon", hint: "Used to eat soup or cereal" },
-  { word: "heart", hint: "Pumps blood in the body" },
-  { word: "camel", hint: "Desert animal with humps" },
-  { word: "watch", hint: "Worn on wrist to tell time" },
-  { word: "piano", hint: "A musical instrument with keys" }
+  { word: "breeze", hint: "A gentle wind" },
+  { word: "jungle", hint: "Dense forest in tropical regions" },
+  { word: "planet", hint: "Orbits a star and may support life" },
+  { word: "bridge", hint: "Connects two places across water or land" },
+  { word: "rocket", hint: "Launches into space" },
+  { word: "island", hint: "Land surrounded by water" },
+  { word: "museum", hint: "Place where historical items are displayed" },
+  { word: "pencil", hint: "Used for writing, can be erased" },
+  { word: "camera", hint: "Captures images or videos" },
+  { word: "ladder", hint: "Used to climb to higher places" },
+  { word: "helmet", hint: "Protects your head" },
+  { word: "castle", hint: "Large fortified building from the past" },
+  { word: "mirror", hint: "Reflects your image" },
+  { word: "forest", hint: "Large area full of trees" },
+  { word: "pirate", hint: "Sailed seas and stole treasure" },
+  { word: "desert", hint: "Very dry place with little rain" },
+  { word: "oxygen", hint: "Gas we breathe to stay alive" },
+  { word: "tunnel", hint: "Underground passageway" },
+  { word: "planet", hint: "Orbits the sun in space" },
+  { word: "violin", hint: "String instrument played with a bow" },
+  { word: "guitar", hint: "Popular instrument with strings" },
+  { word: "wallet", hint: "Holds your money and cards" },
+  { word: "lantern", hint: "Portable light source used in the dark" },
+  { word: "dragon", hint: "Mythical creature that breathes fire" },
+  { word: "rocket", hint: "Used to reach space" },
+  { word: "ticket", hint: "Grants entry or travel access" },
+  { word: "puzzle", hint: "Game or problem to solve" },
+  { word: "cactus", hint: "Plant that survives in the desert" },
+  { word: "castle", hint: "Where medieval kings lived" },
+  { word: "hammer", hint: "Tool used to drive nails" }
 ];
+
 
 /*---------- Variables (state) ---------*/
 let wrongGusses;
@@ -45,7 +46,6 @@ const blankEl = document.querySelector("#blanks");
 const hintEl = document.querySelector("#hint");
 const messageEl = document.querySelector("#message");
 const livesRemaningEl = document.querySelector("#lives-remaning");
-// const wrongLetters = document.querySelectorAll("#wrong-letters li");
 const resetBtnEl = document.querySelector("#reset-btn");
 
 /*-------------- Functions -------------*/
@@ -58,9 +58,6 @@ function init() {
     displayedLetters = new Array(randomWord.length).fill("");
     render();
     livesRemaningEl.textContent = `Remaning lives: ${lives} / 6`;
-    console.log(randomWord);
-    console.log(displayedLetters);
-    console.log(blankEl);
 }
 
 init();
@@ -98,6 +95,7 @@ letterBtns.forEach(btn => {
         const letter = btn.textContent;
 
         btn.disabled = true;
+        btn.style.backgroundColor = "#fde4f2";
         console.log(letter);
 
         if(randomWord.includes(letter)) {
@@ -110,24 +108,22 @@ letterBtns.forEach(btn => {
             wrongGusses++;
             lives--;
 
-            // if (wrongGusses <= wrongLetters.length) {
-            //     wrongLetters[wrongGusses - 1].textContent = letter;
-            // }
-
             hangmanImg.src = `images/hangman-${wrongGusses}.svg`;
         }
       
         render();
         checkWin();
-        console.log(displayedLetters);
     })
 })
 
 resetBtnEl.addEventListener("click", () => { 
     messageEl.textContent = "";
     hintEl.textContent = "Hint: ";
-    letterBtns.forEach(btn => btn.disabled = false);
-    // wrongLetters.forEach(li => li.textContent = "");
+    letterBtns.forEach(btn => {
+        btn.disabled = false;
+        btn.style.backgroundColor = "#eea1cd";
+    });
+
     lives = 6;
     wrongGusses = 0;
     hangmanImg.src = `images/hangman-0.svg`;

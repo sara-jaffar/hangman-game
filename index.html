@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,39 +8,30 @@
     <link rel="stylesheet" href="./css/style.css">
     <script defer src="./js/app.js"></script>
 </head>
+
 <body>
- 
+
     <nav>
         <div>
+            <a href="index.html">🏠 Home</a>
             <a href="game.html">🎮 Play</a>
-            <a href="index.html">📖 How to play</a>
         </div>
     </nav>
 
-    <div id="container">
-        <header>
-            <h1>How To Play</h1>
-        </header>
-        <main>
-            <div class="steps">
-                <p><strong>1. look at the blanks to see how many letters are in the word.</strong></p><br>
-                <p><strong>2. Type a letter to guess:</strong><br>
-                    - ✅ If it is correct, it appears in the word.<br>
-                    - ❌ If it is incorrect, the hangman drawing begins.
-                </p><br>
-                <p><strong>3. You have limited number of trials:</strong><br>
-                    - Each wrong guess adds a part to the stick figure.
-                </p><br>
-                <p><strong>4. Keep guessing letters until:</strong><br>
-                    - 🏆 You reveal the whole word (you win!)<br>
-                    - 💀 The hangman is fully drawn (you lose!)<br>
-                </p>
-            </div>
-            <div id="start-game">
+    <header>
+        <h1>HANGMAN</h1>
+    </header>
+
+    <div id="start-page-container">
+        <div id="start-game">
+            <img id="hangman-img" src="images/hangman-6.svg" alt="hangman-img"><br>
+            <div id="start-steps-btns">
                 <a href="game.html"><button type="button" id="start-btn">Start Game</button></a>
+                <a href="steps.html"><button type="button" id="steps-btn">How To Play</button></a>
             </div>
-        </main>
+        </div>
     </div>
-    
+
 </body>
+
 </html>
