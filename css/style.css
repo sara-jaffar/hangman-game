@@ -7,16 +7,18 @@ body{
 nav {
     display: flex;
     justify-content: right;
-    padding: 10px;
+    margin: 10px 20px;
 }
 
-div a {
-    padding: 0 5px;
+div a { 
+    margin: 0 10px;
 }
 
 nav a {
     color: white;
-    text-decoration: none;;
+    text-decoration: none;
+    font-weight: 550;
+    font-size: 20px;
 }
 
 nav a:hover {
@@ -50,7 +52,7 @@ header {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    height: 100px;
+    height: 150px;
 }
 
 #steps-container {
@@ -102,8 +104,18 @@ header {
     border-radius: 4px;
     border: none;
     width: 30px;
+    padding: 3px;
 }
 
 .keyboard-row button:hover {
     background-color: #fde4f2;
+}
+
+#start-btn, #reset-btn, #steps-btn {
+    background-color: #e68bbe;
+    color: #fff;
+    border-radius: 8px;
+    border-color: #f4b8da;
+    padding: 7px;
+    font-weight: 550;
 }
