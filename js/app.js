@@ -79,12 +79,14 @@ function checkWin() {
         messageEl.textContent = `You Lose!`;
         blankEl.textContent = randomWord.split("").join(" ");
         disableBtns();
+
     }
 }
 
 function disableBtns() {
     letterBtns.forEach(btn => {
         btn.disabled = true;
+        btn.style.backgroundColor = "#fde4f2";
     })
 }
 

@@ -1,24 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 body{
     background: #e68bbe;
     margin: 0;
     height: 100vh;
+    font-family: "Open sans", sans-serif;
 }
 
 nav {
     display: flex;
     justify-content: right;
-    margin: 10px 20px;
+    margin: 15px 20px 0 0;
 }
 
 div a { 
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 nav a {
     color: white;
-    text-decoration: none;
-    font-weight: 550;
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 15px;
 }
 
 nav a:hover {
@@ -58,8 +60,7 @@ header {
 #steps-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    margin-top: -25px;
 }
 
 .steps {
